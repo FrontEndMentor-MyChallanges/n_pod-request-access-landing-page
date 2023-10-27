@@ -1,0 +1,15 @@
+{
+	"name": "n_pod-request-access-landing-page",
+	"version": "1.0.0",
+	"description": "![Design preview for the Pod request access landing page coding challenge](./preview.jpg)",
+	"main": "index.js",
+	"scripts": {
+		"start": "npx tailwindcss -i ./src/tailwind.css -o ./dist/style.css --watch",
+		"prod": "npx tailwindcss -i ./src/tailwind.css -o ./dist/style.css --minify"
+	},
+	"author": "Mirosław Mroczkowski",
+	"license": "ISC",
+	"devDependencies": {
+		"tailwindcss": "^3.3.5"
+	}
+}
