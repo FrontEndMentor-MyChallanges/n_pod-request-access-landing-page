@@ -16,58 +16,70 @@
 
   <link rel="stylesheet" href="./dist/style.css">
 
-  <script src="./src/script.js"></script>
+  <script src="./src/script.js" defer></script>
 </head>
 
 <body class="bg-[#121725] relative w-screen h-full min-h-screen font-chivo flex justify-center">
-  <picture>
-    <source media="(min-width:768px" srcset="./dist/assets/tablet/image-host.jpg">
-    <img src="./dist/assets/mobile/image-host.jpg" alt=""
-      class="fixed z-[1] opacity-[0.09] w-full h-full object-cover md:w-auto md:h-auto md:top-0 md:right-0 md:opacity-100">
-  </picture>
-  <div
-    class="relative wrapper flex flex-col items-center md:items-start w-full min-h-screen z-[10] px-6 max-w-[420px] md:max-w-[768px] md:px-[39px]">
-    <div class="logo-container flex justify-center w-full mt-[62px] md:mt-[50px] md:justify-start">
-      <img src="./dist/assets/desktop/logo.svg" alt="pod logo" class="">
-    </div>
-    <main class="flex flex-col w-full h-auto mt-[57px] md:max-w-[635px] md:bg-customBgDark md:mt-[152px]">
-      <h1
-        class="text-[26px] uppercase text-center md:text-left font-light leading-[36px] text-customTextGreen md:mt-[93px] md:text-5xl md:leading-[56px]">
-        Publish
-        your podcasts
-        <span class="text-white">everywhere.</span>
-      </h1>
 
-      <p
-        class="text-center md:text-left text-[15px] font-[200] leading-[25px] md:leading-[28px] text-customTextLightGray mt-4 md:mt-[31px] md:text-lg md:w-[45ch]">
-        Upload your
-        audio to Pod
-        with a single
-        click. We’ll then distribute
-        your podcast
-        to Spotify, Apple Podcasts, Google Podcasts, Pocket Casts and more! Request access!
-      </p>
-      <div
-        class="md:order-last company-logos flex items-center justify-between md:justify-start md:gap-10 w-full mt-[33px] md:mt-16">
-        <img src="./dist/assets/desktop/spotify.svg" alt="" class="h-[17px] w-auto md:h-[29px]">
-        <img src="./dist/assets/desktop/apple-podcast.svg" alt="" class="h-[17px] md:h-[29px] w-auto">
-        <img src="./dist/assets/desktop/google-podcasts.svg" alt="" class="h-[11px] md:h-[18px] w-auto">
-        <img src="./dist/assets/desktop/pocket-casts.svg" alt="" class="h-[15px] md:h-[26px] w-auto">
+  <div class="wrapper relative flex items-center justify-center w-full min-h-full">
+    <picture>
+      <source media="(min-width:1280px)" srcset="./dist/assets/desktop/image-host.jpg">
+      <source media="(min-width:768px)" srcset="./dist/assets/tablet/image-host.jpg">
+      <img src="./dist/assets/mobile/image-host.jpg" alt="background image"
+        class="opacity-[0.09] z-[-10] fixed top-0 left-0 md:opacity-100 md:right-0 md:left-auto xl:absolute xl:top-1/2 xl:-translate-y-1/2">
+    </picture>
+    <main class="md:px-10 relative flex flex-col xl:justify-center w-full h-full px-6 xl:px-[165px]">
+      <div class="logo-container flex justify-center w-full mt-[62px] md:mt-[50px] xl:-mt-8 md:justify-start">
+        <img src="./dist/assets/desktop/logo.svg" alt="pod logo" class="w-auto">
       </div>
+      <section
+        class="mt-[57px] md:bg-customBgDark md:mt-[152px] xl:mt-[103px] flex flex-col md:max-w-[635px] xl:max-w-[730px]">
+        <h1
+          class="uppercase text-[26px] font-[200] leading-[38px] text-center text-customTextGreen md:text-left md:mt-[93px] md:text-5xl md:leading-[56px] xl:mt-[88px] xl:text-[52px] xl:leading-[62px]">
+          Publish
+          your podcasts
+          <span class="text-white">everywhere.</span>
+        </h1>
 
-      <form class="form md:mt-10 flex flex-col gap-4 mt-12">
-        <div class="md:relative flex flex-col gap-2 md:w-[480px]">
-          <input type="text" placeholder="Email addres"
-            class="md:flex md:flex-col px-8 md:py-[15px] text-sm leading-[28px] py-[10px] rounded-full bg-customBgLight font-bold outline-none text-white ">
-          <p class="text-customError hidden pl-8 text-xs font-bold">Oops! Please check your email</p>
-          <button type="submit"
-            class="md:absolute md:right-[5px] md:top-1/2 md:-translate-y-1/2 px-8 text-sm leading-[28px] py-[10px] rounded-full bg-customTextGreen font-bold outline-none text-customBgDark hover:bg-customTextGreenHover transition-colors duration-300">Request
-            Access</button>
+
+        <p
+          class="mt-4 text-[15px] text-customTextLightGray text-center font-light leading-[25px] md:text-left md:w-[42ch] md:text-lg md:leading-7 md:mt-8">
+          Upload
+          your
+          audio to Pod
+          with a single
+          click. We’ll then distribute
+          your podcast
+          to Spotify, Apple Podcasts, Google Podcasts, Pocket Casts and more!
+        </p>
+
+        <div class="company-logos md:order-last md:mt-16 md:pr-[100px] xl:pr-[185px] flex justify-between mt-8">
+          <img src="./dist/assets/desktop/spotify.svg" alt="" class="h-[17px] md:h-[29px] w-auto">
+          <img src="./dist/assets/desktop/apple-podcast.svg" alt="" class="h-[17px] md:h-[29px] w-auto">
+          <img src="./dist/assets/desktop/google-podcasts.svg" alt="" class="h-[11px] md:h-[18px] w-auto">
+          <img src="./dist/assets/desktop/pocket-casts.svg" alt="" class="h-[15px] md:h-[26px] w-auto">
         </div>
-      </form>
+
+        <form class="md:mt-10 form mt-12" novalidate>
+          <div class="form-container flex flex-col md:max-w-[430px] md:justify-center md:relative">
+            <input type="email" placeholder="Email address"
+              class="inputEmail bg-customBgLight text-sm leading-[28px] pl-8 py-[9px] rounded-full font-bold md:py-[14px] outline-none text-white md:pr-[180px]">
+            <p class="errorMsg text-customError top-14 absolute hidden pl-8 mt-2 text-xs font-bold leading-normal">
+            </p>
+            <button type="submit"
+              class="btnSubmit text-sm leading-[28px] py-[9px] rounded-full font-bold text-customBgDark bg-customTextGreen mt-4 hover:bg-customTextGreenHover transition-colors duration-300 outline-none md:absolute md:mt-0 md:px-[27px] md:right-[5px]">Request
+              Access</button>
+          </div>
+        </form>
+      </section>
     </main>
-    <img src="./dist/assets/desktop/bg-pattern-dots.svg" alt="" class="mt-auto">
+    <img src="./dist/assets/desktop/bg-pattern-dots.svg" alt=""
+      class="md:absolute md:bottom-0 md:left-10 md:block xl:left-auto xl:bottom-[130px] xl:right-0 hidden">
   </div>
+
+
+
+
 </body>
 
 </html>
